@@ -269,7 +269,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:1rem;">
-    <a href="mailto:tanzirrabby34383@gmail.com" class="nav-cta"><span>Hire Me</span></a>
+    <a href="https://mail.google.com/mail/?view=cm&to=tanzirrabby34383@gmail.com&su=Hiring%20Inquiry" target="_blank" class="nav-cta"><span>Hire Me</span></a>
     <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -287,7 +287,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
 <section id="hero">
   <div class="hero-eyebrow">
     <div class="hero-eyebrow-line"></div>
-    <span class="hero-eyebrow-text">Portfolio ·</span>
+    <span class="hero-eyebrow-text">Portfolio · 2026</span>
     <span class="status-dot"></span>
     <span style="font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--green);">Open to Work</span>
   </div>
@@ -312,8 +312,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
   <div class="hero-socials">
     <a href="https://github.com/tanzirrabby" target="_blank">⌥ GitHub</a>
     <a href="https://linkedin.com/in/tanzirrabby" target="_blank">⌘ LinkedIn</a>
-    <a href="mailto:tanzirrabby34383@gmail.com">@ Email</a>
-    <a href="https://medium.com/@tanzirabby" target="_blank">✦ Medium</a>
+    <a href="https://mail.google.com/mail/?view=cm&to=tanzirrabby34383@gmail.com&su=Hello%20from%20tanzir.dev">@ Email</a>
+    <a href="https://medium.com" target="_blank">✦ Medium</a>
   </div>
   <div class="hero-scroll">
     <div class="scroll-bar"></div>
@@ -380,7 +380,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
       <div class="about-meta">
         <div class="meta-row"><span class="meta-key">Location</span><span class="meta-val">Comilla, Bangladesh 🇧🇩</span></div>
         <div class="meta-row"><span class="meta-key">Degree</span><span class="meta-val">BSc CSE — BAIUST (2026)</span></div>
-        <div class="meta-row"><span class="meta-key">Email</span><span class="meta-val"><a href="mailto:tanzirrabby34383@gmail.com">tanzirrabby34383@gmail.com</a></span></div>
+        <div class="meta-row"><span class="meta-key">Email</span><span class="meta-val"><a href="https://mail.google.com/mail/?view=cm&to=tanzirrabby34383@gmail.com&su=Hello%20from%20tanzir.dev">tanzirrabby34383@gmail.com</a></span></div>
         <div class="meta-row"><span class="meta-key">GitHub</span><span class="meta-val"><a href="https://github.com/tanzirrabby" target="_blank">github.com/tanzirrabby</a></span></div>
         <div class="meta-row"><span class="meta-key">Status</span><span class="meta-val" style="color:var(--green);">Open to opportunities</span></div>
       </div>
@@ -728,7 +728,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
     </div>
     <div class="contact-right">
       <div class="c-links">
-        <a href="mailto:tanzirrabby34383@gmail.com" class="c-link">
+        <a href="https://mail.google.com/mail/?view=cm&to=tanzirrabby34383@gmail.com&su=Hello%20from%20tanzir.dev" class="c-link">
           <div class="c-icon">✉</div>
           <div><div class="c-lbl">Email</div><div class="c-val">tanzirrabby34383@gmail.com</div></div>
           <div class="c-arr">↗</div>
@@ -743,7 +743,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
           <div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/tanzirrabby</div></div>
           <div class="c-arr">↗</div>
         </a>
-        <a href="https://medium.com/@tanzirabby" target="_blank" class="c-link">
+        <a href="https://medium.com" target="_blank" class="c-link">
           <div class="c-icon">✦</div>
           <div><div class="c-lbl">Medium</div><div class="c-val">Articles on AI & Engineering</div></div>
           <div class="c-arr">↗</div>
@@ -770,7 +770,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:1.
 
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Custom cursor
 const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -809,7 +809,7 @@ function sendMsg(e){
   if(n&&em&&m){
     const s=encodeURIComponent('Message from '+n+' via tanzir.dev');
     const b=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\nMessage:\n'+m);
-    window.location.href=`mailto:tanzirrabby34383@gmail.com?subject=${s}&body=${b}`;
+    window.open(`https://mail.google.com/mail/?view=cm&to=tanzirrabby34383@gmail.com&su=${s}&body=${b}`,"_blank");
     toast('✓ Opening email client...');e.target.reset();
   }else{toast('✗ Please fill all fields.',false);}
 }
@@ -838,25 +838,4 @@ document.querySelectorAll('.sec,.stats-wrap,.ticker,.nl').forEach(el=>{
 
 document.querySelectorAll('.proj-card').forEach((c,i)=>{
   c.style.opacity='0';c.style.transform='translateY(20px)';
-  c.style.transition=`opacity .5s ease ${i*.06}s,transform .5s ease ${i*.06}s,background .3s`;
-  io.observe(c);
-});
-
-document.querySelectorAll('.honor-card').forEach((c,i)=>{
-  c.style.opacity='0';c.style.transform='translateY(16px)';
-  c.style.transition=`opacity .5s ease ${i*.07}s,transform .5s ease ${i*.07}s,background .3s`;
-  io.observe(c);
-});
-
-document.querySelectorAll('.exp-item').forEach((c,i)=>{
-  c.style.opacity='0';c.style.transform='translateX(-12px)';
-  c.style.transition=`opacity .5s ease ${i*.05}s,transform .5s ease ${i*.05}s`;
-  io.observe(c);
-});
-</script>
-</body>
-</html>
-
-
-
-
+  c.style.transition=`opacity .5s ease ${i*.06}s,transform .5s ease ${i*.06}s,background .3s
