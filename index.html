@@ -152,6 +152,23 @@ nav.scrolled{background:#060810ee;backdrop-filter:blur(20px);}
 .exp-tag{font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:1px;color:var(--muted);padding:.12rem .45rem;border:1px solid var(--border2);}
 
 /* PROJECTS */
+.proj-link {
+  /* Keep your existing styles */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  
+  /* Add these two lines */
+  position: relative; 
+  z-index: 2; 
+}
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
 .proj-card{background:var(--bg2);border:1px solid var(--border2);padding:2rem;position:relative;overflow:hidden;transition:all .35s;cursor:pointer;}
 .proj-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#00ff8806,transparent 60%);opacity:0;transition:opacity .3s;}
@@ -189,8 +206,8 @@ nav.scrolled{background:#060810ee;backdrop-filter:blur(20px);}
 /* EDUCATION */
 .edu-card{background:var(--bg2);border:1px solid var(--border2);padding:3rem;position:relative;overflow:hidden;transition:border-color .3s;}
 .edu-card:hover{border-color:var(--g);}
-.edu-card::after{content:'> BSC_CSE';position:absolute;bottom:2rem;right:2rem;font-family:'Orbitron',monospace;font-size:3rem;font-weight:900;color:var(--border2);opacity:.5;pointer-events:none;}
-.edu-degree{font-family:'Orbitron',monospace;font-size:1.3rem;font-weight:900;color:var(--text);margin-bottom:.6rem;letter-spacing:-1px;line-height:1.2;}
+.edu-card::after{position:absolute;bottom:2rem;right:2rem;font-family:'Orbitron',monospace;font-size:3rem;font-weight:900;color:var(--border2);opacity:.5;pointer-events:none;}
+.edu-card:nth-child(1)::after{content:'> BSC_CSE';}.edu-degree{font-family:'Orbitron',monospace;font-size:1.3rem;font-weight:900;color:var(--text);margin-bottom:.6rem;letter-spacing:-1px;line-height:1.2;}
 .edu-uni{font-family:'Share Tech Mono',monospace;font-size:.78rem;color:var(--g);font-weight:600;letter-spacing:1px;margin-bottom:.5rem;text-shadow:0 0 10px #00ff8833;}
 .edu-detail{font-size:.77rem;color:var(--muted);line-height:2;margin-bottom:1.5rem;}
 .edu-status{display:inline-flex;align-items:center;gap:.5rem;font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--g);border:1px solid var(--g);padding:.3rem .9rem;box-shadow:0 0 10px #00ff8822;}
@@ -736,11 +753,32 @@ footer{position:relative;z-index:2;padding:1.8rem 3rem;display:flex;align-items:
     <div class="sec-eyebrow"><span class="sec-num">// 05</span><div class="sec-line"></div></div>
     <h2 class="sec-title">Educa<span>tion</span></h2>
   </div>
-  <div class="edu-card">
-    <div class="edu-degree">Bachelor of Science<br/>Computer Science & Engineering</div>
-    <div class="edu-uni">Bangladesh Army University of Science & Technology (BAIUST)</div>
-    <div class="edu-detail">Comilla, Bangladesh · Full-time undergraduate<br/>Core focus: Machine Learning · Deep Learning · Full-Stack Development · Algorithms & Data Structures · Computer Networks<br/>Activities: Vice Chair — IEEE BAIUST Student Branch · Technical Project Manager — BAIUST Computer Club</div>
-    <span class="edu-status">Currently Enrolled · Expected August 2026</span>
+  
+  <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <div class="edu-card">
+      <div class="edu-degree">Bachelor of Science<br/>Computer Science & Engineering</div>
+      <div class="edu-uni">Bangladesh Army University of Science & Technology (BAIUST)</div>
+      <div class="edu-detail">Cumilla, Bangladesh · Full-time undergraduate<br/>Core focus: Machine Learning · Deep Learning · Full-Stack Development · Algorithms & Data Structures · Computer Networks<br/>Activities: Vice Chair — IEEE BAIUST Student Branch · Technical Project Manager — BAIUST Computer Club</div>
+      <span class="edu-status">Currently Enrolled · Expected August 2026</span>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-degree">Higher Secondary Certificate ( HSC )</div>
+      <div class="edu-uni">Cumilla Govt. College</div>
+      <div class="edu-detail">Cumilla, Bangladesh<br/>Science Group</div>
+      <span class="edu-status" style="border-color: var(--muted); color: var(--muted); box-shadow: none;">
+        <span style="display:none;"></span>Completed
+      </span>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-degree">Secondary School Certificate ( SSC )</div>
+      <div class="edu-uni">Cumilla Modern High School</div>
+      <div class="edu-detail">Cumilla, Bangladesh<br/>Science Group</div>
+      <span class="edu-status" style="border-color: var(--muted); color: var(--muted); box-shadow: none;">
+        <span style="display:none;"></span>Completed
+      </span>
+    </div>
   </div>
 </section>
 
@@ -754,31 +792,37 @@ footer{position:relative;z-index:2;padding:1.8rem 3rem;display:flex;align-items:
     <p class="sec-sub">Technical articles on AI, ML, and engineering.</p>
   </div>
   <div class="art-list">
-    <a href="https://medium.com/@tanzirrabby" target="_blank" class="art-row">
+    
+    <a href="https://medium.com/@tanzirabby/why-96-8-accuracy-wasnt-enough-lessons-from-a-dataset-creation-competition-7eb3a30f615d" target="_blank" class="art-row">
       <div class="art-n">01</div>
       <div><div class="art-cat">AI Research · Featured</div><div class="art-title">Why 96.8% Accuracy Wasn't Enough: Lessons from the Dataset Creation Competition</div><div class="art-meta">Medium · ML Engineering & Production Systems</div></div>
       <div class="art-arrow">↗</div>
     </a>
-    <a href="https://medium.com" target="_blank" class="art-row">
+    
+    <a href="https://medium.com/p/9ed17ec37afb?postPublishedType=initial" target="_blank" class="art-row">
       <div class="art-n">02</div>
       <div><div class="art-cat">Deep Learning</div><div class="art-title">How Vision Transformers Are Revolutionizing Image Classification</div><div class="art-meta">Medium · AI & Machine Learning</div></div>
       <div class="art-arrow">↗</div>
     </a>
-    <a href="https://medium.com" target="_blank" class="art-row">
+    
+    <a href="https://medium.com/p/094723a62f53?postPublishedType=initial" target="_blank" class="art-row">
       <div class="art-n">03</div>
       <div><div class="art-cat">Healthcare AI</div><div class="art-title">Early Disease Detection with Deep Learning: A Practical Guide</div><div class="art-meta">Medium · Medical AI</div></div>
       <div class="art-arrow">↗</div>
     </a>
-    <a href="https://medium.com" target="_blank" class="art-row">
+    
+    <a href="PASTE_YOUR_ACTUAL_ARTICLE_4_URL_HERE" target="_blank" class="art-row">
       <div class="art-n">04</div>
       <div><div class="art-cat">Full Stack</div><div class="art-title">Building Real-Time Web Apps with React, Node.js & MongoDB</div><div class="art-meta">Medium · Web Development</div></div>
       <div class="art-arrow">↗</div>
     </a>
-    <a href="https://medium.com" target="_blank" class="art-row">
+    
+    <a href="PASTE_YOUR_ACTUAL_ARTICLE_5_URL_HERE" target="_blank" class="art-row">
       <div class="art-n">05</div>
       <div><div class="art-cat">Python</div><div class="art-title">Python Best Practices Every Developer Should Know in 2025</div><div class="art-meta">Medium · Programming</div></div>
       <div class="art-arrow">↗</div>
     </a>
+    
   </div>
 </section>
 
@@ -822,7 +866,7 @@ footer{position:relative;z-index:2;padding:1.8rem 3rem;display:flex;align-items:
         <a href="https://linkedin.com/in/tanzirrabby" target="_blank" class="c-link">
           <div class="c-icon">⌘</div><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/tanzirrabby</div></div><div class="c-arr">↗</div>
         </a>
-        <a href="https://medium.com" target="_blank" class="c-link">
+        <a href="https://medium.com/@tanzirabby" target="_blank" class="c-link">
           <div class="c-icon">✦</div><div><div class="c-lbl">Medium</div><div class="c-val">Articles on AI & Engineering</div></div><div class="c-arr">↗</div>
         </a>
         <a href="https://www.researchgate.net/profile/Tanzir-Hossain-4?ev=hdr_xprf" target="_blank" class="c-link">
@@ -981,4 +1025,3 @@ document.querySelectorAll('.exp-item').forEach((c,i)=>{
 </script>
 </body>
 </html>
-
